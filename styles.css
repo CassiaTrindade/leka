@@ -1,0 +1,257 @@
+/* Reset Básico - Remove margens e paddings padrões e aplica o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da Página - Define o estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+}
+
+/* Cabeçalho - Configura o estilo do topo da página */
+header {
+    background-color: #002d6c;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Menu - Define a barra de navegação e seus links */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #00bcd4;
+    color: #002d6c;
+}
+
+/* Formulário - Configurações de estilo para o formulário */
+form {
+    background-color: #fff;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label,
+form input,
+form textarea {
+    font-size: 12px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: #2a3d66;
+    color: white;
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #1a2b42;
+}
+
+form button:active {
+    background-color: #16304d;
+}
+
+/* Rodapé - Configurações de estilo para o rodapé */
+footer p {
+    text-align: center;
+    font-size: 14px;
+    color: #7a7777;
+    padding: 10px;
+    background-color: #f4f4f4;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Parágrafos - Configurações de estilo para os parágrafos */
+p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+/* Seção Todos - Estilo para a seção de conteúdos principais */
+.todos {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.todos h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.todos p {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* Grau Acadêmico - Configura estilo de uma seção específica */
+.degree {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.degree h3 {
+    font-size: 1rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.degree p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.degree .competencies {
+    margin-top: 10px;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Botão LinkedIn - Botão de ação */
+.btn-cta {
+    display: inline-block;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-cta:hover {
+    background-color: #3498db;
+}
+
+/* Container do Portfólio */
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px; 
+    margin: 0;
+    background-color: #f4f4f4;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* Item do Portfólio */
+.portfolio-item {
+    width: 50%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagem do Portfólio - Aumento da largura e altura */
+.portfolio-item img {
+    width: 100%;
+    height: 300px; /* Aumento da altura da imagem */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Título do Portfólio */
+.portfolio-item .portfolio-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+}
+
+/* Efeitos de hover no Item do Portfólio */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover .portfolio-title {
+    color: #00bcd4;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .portfolio-container {
+        gap: 20px;
+    }
+    .portfolio-item {
+        width: 100%;
+    }
+    /* Ajusta as imagens para telas menores */
+    .portfolio-item img {
+        height: 200px; /* Ajuste para telas pequenas */
+    }
+}
